@@ -1,0 +1,21 @@
+.options-container{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.options-container>span{
+  cursor: pointer;
+ margin: 3px;
+ padding: 4px;
+ border-radius: 4px;
+ background-color: rgb(148, 101, 192);
+ color: #fff;
+}
+
+.options-container>span:hover{
+  color:rgb(148, 101, 192);
+  border:2px solid rgb(148, 101, 192);
+  background-color: #fff;
+  transition: 0.1s ease-in;
+}
