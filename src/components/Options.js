@@ -27,10 +27,11 @@ const Options = ({onSelect}) => {
       "id": 4,
       "type": "select",
       "label": "Country",
+      "component":"Select",
       "options": [
         {"value": "", "label": "Select country"},
-        {"value": "us", "label": "USA"},
-        {"value": "in", "label": "India"}
+        {"value": "usa", "label": "USA"},
+        {"value": "ind", "label": "India"}
       ]
     },
     {
@@ -56,6 +57,8 @@ const Options = ({onSelect}) => {
     {
       "id": 8,
       "type": "date",
+      "component":"Date",
+      "placeholder":"enter date",
       "label": "Birth Date"
     },
     {

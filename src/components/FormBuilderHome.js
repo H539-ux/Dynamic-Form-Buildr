@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './home.css'
 import Options from './Options'
 import SelectedCard from './SelectedCard'
 import { useNavigate } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid';
 const FormBuilderHome = () => {
-  const [selected,setSelected] = useState([])
+  const [selected,setSelected] = useState(() => {
+    const saved = localStorage.getItem('selectedFields');
+    return saved ? JSON.parse(saved) : [];
+  })
 
   const navigate = useNavigate()
+  useEffect(() => {
+    localStorage.setItem('selectedFields', JSON.stringify(selected));
+  }, [selected]);
   const select = (field)=>{
     if(selected.length>7) return;
     setSelected((prev)=>[...prev,{field,
