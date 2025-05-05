@@ -6,12 +6,10 @@ import SubmitedData from './SubmitedData';
 const Display = () => {
   const { state } = useLocation();
   const [data,setData] = useState({})
-  const [close,setClose] = useState(false);
-  const [submittedData,setSubmittedData] = useState(false);
+  const [showModel,setShowModel] = useState(false);
  const handleSubmit = (e)=>{
     e.preventDefault();
-     setSubmittedData(true);
-     console.log(data)
+      setShowModel(true);
  }
 
  const handleChange = (value,label)=>{
@@ -40,9 +38,9 @@ const Display = () => {
             />
           ))
         }
-      {(submittedData&& !close) &&  <SubmitedData
+      {showModel &&  <SubmitedData
         data={data}
-        onClose={()=>setClose(true)}
+        onClose={()=>setShowModel(false)}
       /> }
       <button  type='submit'>submit</button>
        
