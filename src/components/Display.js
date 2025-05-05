@@ -2,11 +2,15 @@ import React, { Component, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import FieldsComponents from './FieldsComponents';
 import './display.css'
+import SubmitedData from './SubmitedData';
 const Display = () => {
   const { state } = useLocation();
   const [data,setData] = useState({})
+  const [close,setClose] = useState(false);
+  const [submittedData,setSubmittedData] = useState(false);
  const handleSubmit = (e)=>{
     e.preventDefault();
+     setSubmittedData(true);
      console.log(data)
  }
 
@@ -36,9 +40,12 @@ const Display = () => {
             />
           ))
         }
-    
+      {(submittedData&& !close) &&  <SubmitedData
+        data={data}
+        onClose={()=>setClose(true)}
+      /> }
       <button  type='submit'>submit</button>
-
+       
      </form>
      
 
