@@ -51,7 +51,7 @@ const FormBuilderHome = () => {
         
       </div>
       {selected.length>7 && <h3 style={{color:'red'}}>cant select more than 7</h3>} 
-      <button style={{width:'5rem',backgroundColor:'#00b289',borderStyle:'none',padding:"4px",color:'#fff',cursor:"pointer",borderRadius:"4px"}} onClick={sendSelected}>confirm</button>
+      <button className ='confirm' disabled={selected.length === 0} onClick={sendSelected}>confirm</button>
     </div>
   )
 }

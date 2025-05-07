@@ -34,37 +34,14 @@ const Options = ({onSelect}) => {
         {"value": "ind", "label": "India"}
       ]
     },
-    {
-      "id": 5,
-      "type": "checkbox",
-      "label": "Subscribe to newsletter"
-    },
-    {
-      "id": 6,
-      "type": "radio",
-      "label": "Gender",
-      "options": [
-        {"value": "male", "label": "Male"},
-        {"value": "female", "label": "Female"}
-      ]
-    },
-    {
-      "id": 7,
-      "type": "textarea",
-      "label": "Bio",
-      "rows": 3
-    },
+   
+   
     {
       "id": 8,
       "type": "date",
       "component":"Date",
       "placeholder":"enter date",
       "label": "Birth Date"
-    },
-    {
-      "id": 9,
-      "type": "file",
-      "label": "Upload Photo"
     }
   ]
 

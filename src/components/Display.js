@@ -13,7 +13,7 @@ const Display = () => {
   }
 
   const handleChange = (value, label) => {
-
+      
     setData((prev) => (
       {
         ...prev,
@@ -42,7 +42,7 @@ const Display = () => {
           data={data}
           onClose={() => setShowModel(false)}
         />}
-        <button type='submit'>submit</button>
+        <button  type='submit'>submit</button>
 
       </form>
 
